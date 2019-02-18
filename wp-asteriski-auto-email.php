@@ -131,6 +131,7 @@ function asteriski_plugin_page() {
 
 add_action('post_submitbox_misc_actions', 'send_now');
 add_action('save_post', 'save_send_now');
+add_action('publish_post', 'save_send_now');
 
 function send_now()
 {
@@ -188,6 +189,7 @@ function save_send_now($post_id)
         }
     }
     remove_action('save_post', 'save_send_now');
+    remove_action('publish_post', 'save_send_now');
 }
 /** SEND EMAIL */
 function send_email($post_id){
