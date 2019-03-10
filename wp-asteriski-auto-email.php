@@ -129,7 +129,8 @@ function asteriski_plugin_page() {
 
 /** POST */
 function EmailMetaBox() {
-	add_meta_box( 'hello_gutenberg_meta_box', __( 'Sähköposti', 'hello-gutenberg' ), 'send_now', 'post' );
+    add_meta_box( 'hello_gutenberg_meta_box', __( 'Sähköposti', 'hello-gutenberg' ), 'send_now', 'post',
+null, null, 'high' );
 }
 
 add_action('add_meta_boxes', 'EmailMetaBox');
@@ -146,7 +147,7 @@ function send_now($post)
     wp_nonce_field('asteriski_plugin_nonce_'.$post_id, 'asteriski_plugin_nonce');
     if ( current_user_can('author') || current_user_can('administrator') || current_user_can('editor') ){ ?>
     <div class="misc-pub-section misc-pub-section-last">
-        <label><input type="checkbox" value="1" name="_send_now" />Send now to <?php echo get_option('send_to'); ?></label>
+        <label><input type="checkbox" value="1" name="_send_now" />Lähetä nyt osoitteeseen <?php echo get_option('send_to'); ?></label>
     </div>
     <?php }
 }
