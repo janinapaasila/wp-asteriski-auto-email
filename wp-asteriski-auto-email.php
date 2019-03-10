@@ -128,14 +128,17 @@ function asteriski_plugin_page() {
 }
 
 /** POST */
+function EmailMetaBox() {
+	add_meta_box( 'hello_gutenberg_meta_box', __( 'Sähköposti', 'hello-gutenberg' ), 'send_now', 'post' );
+}
 
+add_action('add_meta_boxes', 'EmailMetaBox');
 add_action('post_submitbox_misc_actions', 'send_now');
-add_action('save_post', 'save_send_now');
 add_action('publish_post', 'save_send_now');
 
-function send_now()
+function send_now($post)
 {
-    $post_id = get_the_ID();
+    $post_id = $post->ID;
     if (get_post_type($post_id) != 'post') {
         return;
     }
@@ -144,9 +147,6 @@ function send_now()
     if ( current_user_can('author') || current_user_can('administrator') || current_user_can('editor') ){ ?>
     <div class="misc-pub-section misc-pub-section-last">
         <label><input type="checkbox" value="1" name="_send_now" />Send now to <?php echo get_option('send_to'); ?></label>
-    </div>
-    <div class="misc-pub-section misc-pub-section-last">
-        <label><input type="checkbox" value="1" <?php if($value==1) { echo "checked"; } ?> name="_send_later" />Send later!</label>
     </div>
     <?php }
 }
