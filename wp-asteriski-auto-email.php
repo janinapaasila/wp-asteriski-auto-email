@@ -2,10 +2,10 @@
 /**
 * Plugin Name: WP Asteriski auto email
 * Plugin URI: http://www.asteriski.fi
-* Description: Asteriski-lisäosa Wordpressiin. Artikkelien lähetys riski-infoon.
-* Version: 0.0.2
-* Author: Marko Loponen
-* Author URI: https://github.com/z00ze
+* Description: Artikkelien lähetys riski-infoon.
+* Version: 1.0
+* Author: Marko Loponen, Asteriski ry
+* Author URI: https://github.com/asteriskiry
 * License: MIT
 */
 defined('ABSPATH') or die('No script kiddies please!');
@@ -59,7 +59,7 @@ function asteriski_plugin_page()
 {
     ?>
     <div style="text-align: left;">
-        <h1>Asteriski-plugin</h1>
+        <h1>Sähköpostiasetukset</h1>
       <form action="options.php" method="post">
 
         <?php
