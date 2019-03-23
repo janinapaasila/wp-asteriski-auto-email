@@ -30,7 +30,7 @@ register_deactivation_hook(__FILE__, 'asteriski_plugin_deactivation');
 
 /** ADMIN */
 add_action('admin_menu', function () {
-    add_menu_page('Asteriski-lisäosan asetukset', 'Asteriski-lisäosa', 'manage_options', 'asteriski-plugin', 'asteriski_plugin_page');
+    add_menu_page('Sähköpostiasetukset', 'Sähköposti', 'manage_options', 'asteriski-plugin', 'asteriski_plugin_page');
 });
 
 
