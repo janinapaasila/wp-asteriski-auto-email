@@ -225,14 +225,13 @@ function send_email($post_id)
     $from_email = get_option('send_from_email');
     $from_name = get_option('send_from_name');
     $cats = get_the_category($post_id);
-    $emailcats = '';
-    foreach ($cats as $cat) {
-        if ($cat->name != 'Uutinen') {
-            $emailcats .= $cat->name.' ';
-        }
+    if ( ! empty ( $cats ) ) {
+        $emailcats = $cats[0]->name;
+    } else {
+        $emailcats = "Uutinen";
     }
 
-    $subject = get_option('mail_prefix').strtoupper($emailcats)."".$post->post_title;
+    $subject = get_option('mail_prefix') . " " . strtoupper($emailcats) . " " . $post->post_title;
     $body = get_option('mail_header')."<br>".$post->post_content."<br>".get_option('mail_footer')."<br><br>Uutisen voit lukea myös nettisivuilta: <a href='".get_permalink($post_id)."'>".get_permalink($post_id)."</a><br>";
     $headers = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $from_name . ' <' . $from_email . '>');
 
