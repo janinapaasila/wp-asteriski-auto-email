@@ -233,7 +233,7 @@ function send_email($post_id)
     }
 
     $subject = get_option('mail_prefix').strtoupper($emailcats)."".$post->post_title;
-    $body = get_option('mail_header')."<br>".nl2br($post->post_content)."<br>".get_option('mail_footer')."<br><br>Uutisen voit lukea myös nettisivuilta: <a href='".get_permalink($post_id)."'>".get_permalink($post_id)."</a><br>";
+    $body = get_option('mail_header')."<br>".$post->post_content."<br>".get_option('mail_footer')."<br><br>Uutisen voit lukea myös nettisivuilta: <a href='".get_permalink($post_id)."'>".get_permalink($post_id)."</a><br>";
     $headers = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $from_name . ' <' . $from_email . '>');
 
     return wp_mail($to, $subject, $body, $headers);
