@@ -3,7 +3,7 @@
 * Plugin Name: WP Asteriski auto email
 * Plugin URI: http://www.asteriski.fi
 * Description: Artikkelien lähetys riski-infoon.
-* Version: 1.0
+* Version: 1.1
 * Author: Marko Loponen, Asteriski ry
 * Author URI: https://github.com/asteriskiry
 * License: MIT
@@ -36,6 +36,8 @@ add_action('admin_menu', function () {
 
 add_action('admin_init', function () {
     register_setting('asteriski-plugin-settings', 'send_to', 'asteriski_validate_email');
+    register_setting('asteriski-plugin-settings', 'send_from_email', 'asteriski_validate_email');
+    register_setting('asteriski-plugin-settings', 'send_from_name', 'asteriski_validate_text');
     register_setting('asteriski-plugin-settings', 'mail_prefix', 'asteriski_validate_text');
     register_setting('asteriski-plugin-settings', 'mail_header');
     register_setting('asteriski-plugin-settings', 'mail_footer');
@@ -67,15 +69,30 @@ function asteriski_plugin_page()
     do_settings_sections('asteriski-plugin-settings'); ?>
         <table>
             <tr>
-                <th valign="top">Where to send emails</th>
+                <th valign="top">Vastaanottajan sähköpostiosoite</th>
                 <td><input type="email" placeholder="" name="send_to" value="<?php echo esc_attr(get_option('send_to')); ?>" size="33" /></td>
             </tr>
 
             <tr>
-                <th valign="top">Prefix of email</th>
+                <th valign="top">Lähettäjän sähköpostiosoite</th>
+                <td><input type="email" placeholder="" name="send_from_email" value="<?php echo esc_attr(get_option('send_from_email')); ?>" size="33" /></td>
+            </tr>
+
+            <tr>
+                <th valign="top">Lähettäjän nimi</th>
+                <td><input type="text" placeholder="" name="send_from_name" value="<?php echo esc_attr(get_option('send_from_name')); ?>" size="33" /></td>
+            </tr>
+
+            <tr>
+                <th valign="top">Otsikon etuliite</th>
                 <td><input type="text" placeholder="" name="mail_prefix" value="<?php echo esc_attr(get_option('mail_prefix')); ?>" size="33" /></td>
             </tr>
             <tr>
+
+<?php
+// Kommentoidaan turhat pois
+/**
+
                 <th valign="top">Header</th>
                 <td><textarea placeholder="" name="mail_header" rows="5" cols="50"><?php echo esc_attr(get_option('mail_header')); ?></textarea></td>
             </tr>
@@ -112,6 +129,7 @@ function asteriski_plugin_page()
     echo '<label><input type="checkbox" value="1" name="send_post_poned" />SEND all from postponed email list.</label>'; ?>
                 </td>
             </tr>
+*/ ?>
 
             <tr>
                 <td><?php submit_button(); ?></td>
@@ -204,6 +222,8 @@ function send_email($post_id)
 {
     $post = get_post($post_id);
     $to = get_option('send_to');
+    $from_email = get_option('send_from_email');
+    $from_name = get_option('send_from_name');
     $cats = get_the_category($post_id);
     $emailcats = '';
     foreach ($cats as $cat) {
@@ -212,9 +232,9 @@ function send_email($post_id)
         }
     }
 
-    $subject = get_option('mail_prefix')." ".strtoupper($emailcats)."".$post->post_title;
+    $subject = get_option('mail_prefix').strtoupper($emailcats)."".$post->post_title;
     $body = get_option('mail_header')."<br>".nl2br($post->post_content)."<br>".get_option('mail_footer')."<br><br>Uutisen voit lukea myös nettisivuilta: <a href='".get_permalink($post_id)."'>".get_permalink($post_id)."</a><br>";
-    $headers = array('Content-Type: text/html; charset=UTF-8');
+    $headers = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $from_name . ' <' . $from_email . '>');
 
     return wp_mail($to, $subject, $body, $headers);
 }
