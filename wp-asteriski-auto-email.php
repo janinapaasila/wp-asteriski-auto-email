@@ -217,6 +217,27 @@ function save_send_now($post_id)
     }
     remove_action('publish_post', 'save_send_now');
 }
+
+/**
+ * This is for creating the html around the email
+ * Made by Roosa Virta
+ * @param $post
+ * @param $post_id
+ * @return false|string if everything goes as planned, this is the html
+ */
+
+function get_post_html($post, $post_id)
+{
+    $banner = get_the_post_thumbnail_url($post_id) ?: "https://www.asteriski.fi/wp-content/themes/wp-asteriski-theme/assets/img/tausta.jpg";
+    $title = $post->post_title;
+    $content = $post->post_content;
+    $article_url = get_permalink($post_id) ?: "https://www.asteriski.fi";
+    ob_start();
+    require "email.php";
+    $post_html = ob_get_clean();
+    return $post_html;
+}
+
 /** SEND EMAIL */
 function send_email($post_id)
 {
@@ -232,7 +253,7 @@ function send_email($post_id)
     }
 
     $subject = get_option('mail_prefix') . " " . strtoupper($emailcats) . " " . $post->post_title;
-    $body = get_option('mail_header')."<br>".$post->post_content."<br>".get_option('mail_footer')."<br><br>Uutisen voit lukea myös nettisivuilta: <a href='".get_permalink($post_id)."'>".get_permalink($post_id)."</a><br>";
+    $body = get_post_html($post, $post_id);
     $headers = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $from_name . ' <' . $from_email . '>');
 
     return wp_mail($to, $subject, $body, $headers);

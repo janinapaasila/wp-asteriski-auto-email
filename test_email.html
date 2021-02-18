@@ -1,0 +1,184 @@
+<!--This is a test.html for making pretty emails straight from WP. Made by Roosa Virta-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asteriskin maili</title>
+</head>
+<body>
+<style>
+    .container-table {
+        width: 100%;
+        background-color: #ebebeb;
+    }
+
+    table {
+        width: 100%;
+        border-left: 2px solid #e6e6e6;
+        border-right: 2px solid #e6e6e6;
+    }
+
+    .table-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .td-content-slim {
+        background-color: #ffffff;
+        border-top: 0px solid #000000;
+        text-align: center;
+        height: 50px;
+    }
+
+    .td-content {
+        background-color: #ffffff;
+        border-top: 0px solid #333333;
+        border-bottom: 10px solid #FFFFFF;
+    }
+
+    .banner {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-bottom: 3px solid #b3c9b3;
+        object-position: 50% 35%;
+    }
+    .content{
+        padding: 20px;
+    }
+
+    .small-text {
+        font-size: 11px;
+        color: #575757;
+        line-height: 200%;
+        font-family: 'Arial', Sans-Serif;
+        text-decoration: none;
+    }
+
+    .bolder-text {
+        font-weight: bold;
+    }
+
+    .wp-block-separator {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-top: 3px solid rgb(82 187 90);
+        width: 40%;
+    }
+
+    body {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--black_default);
+        overflow-x: hidden !important;
+        line-height: 1.7;
+        font-family: 'Arial', Sans-Serif;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #494a48;
+        font-family: arial;
+        text-align: center;
+    }
+
+    .wp-block-image > img {
+        max-width: 80%;
+        max-height: 400px;
+    }
+
+    .wp-block-image {
+        text-align: center;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    a {
+        color: #35b233 !important;
+        font-weight: bold;
+    }
+</style>
+
+<table cellspacing="0" cellpadding="0" width="100%" bgcolor="#ebebeb">
+    <tbody>
+    <tr>
+        <td align="center" valign="top"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<table cellspacing="0" cellpadding="0">
+    <tbody>
+    <tr>
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+                <td class="td-content-slim" align="center">
+                    <span class="small-text">
+                        Tämän voi lukea myös nettisivuillamme!
+                        <!--                        <a class="small-text bolder-text" href="<?=$this->article_url?>">Avaa selaimessa.</a>-->
+                        <a class="small-text bolder-text" href="http://localhost/2021/02/18/testi-sauna/">Avaa selaimessa.</a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td-content" align="left" valign="middle">
+                    <!--                        <img class="banner" src="<?=$this->article_img?>" border="0" alt="Banneri" align="center" />-->
+                    <img class="banner" src="https://www.asteriski.fi/wp-content/themes/wp-asteriski-theme/assets/img/tausta.jpg"
+                         border="0" alt="Banneri" align="center"/>
+
+                </td>
+
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table-content" style="margin-left: 20px !important;" cellspacing="0" cellpadding="25">
+            <h1>
+                <!--                    <?= $this->title ?>-->
+                Otsikko:
+            </h1>
+            <div class="content">
+                <p>
+                    The standard Lorem Ipsum passage, used since the 1500s
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+                <hr class="wp-block-separator">
+                <p>
+                    1914 translation by H. Rackham
+                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+                </p>
+                <figure class="wp-block-image size-large"><noscript><img loading="lazy" width="3508" height="2480" src="http://localhost/wp-content/uploads/2019/09/pilttisitsit19.png" alt="" class="wp-image-4429"/></noscript><img loading="lazy" width="3508" height="2480" src="http://localhost/wp-content/uploads/2019/09/pilttisitsit19.png" data-src="http://localhost/wp-content/uploads/2019/09/pilttisitsit19.png" alt="" class="wp-image-4429 lazyloaded"></figure>
+            </div>
+           </table>
+
+
+        <!--        FOOTER          -->
+        <table style="border-top: 3px solid #b3c9b3;" cellpadding="5" cellspacing="0">
+            <td class="td-content-slim" style="text-align: left; display: flex" align="center">
+                <img class="logo"
+                     src="https://www.asteriski.fi/wp-content/themes/wp-asteriski-theme/assets/img/asteriski-logo.png">
+                <span class="small-text" style="margin-left: 10px;">
+                    <a href="mailto:asteriski.utu.fi">Onko asiaa?</a><br>
+                        Käy nettisivuillamme!
+                    <a href="https://www.asteriski.fi/">asteriski.fi</a>
+                </span>
+            </td>
+
+            <td class="td-content-slim" style="text-align: right;" align="center">
+                <span class="small-text">
+                    Jos et halua saada Riski-infon viestejä <a href="https://lists.utu.fi/mailman/listinfo/riski-info">peruuta tilaus täällä.</a>.
+                </span>
+        </table>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
