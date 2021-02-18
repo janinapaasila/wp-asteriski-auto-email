@@ -41,13 +41,17 @@
         padding: 20px;
     }
 
-    .banner {
+
+    .banner{
         width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-bottom: 3px solid #b3c9b3;
-        object-position: 50% 35%;
     }
+
+    .cropped {
+        height: 300px;
+        overflow: hidden;
+        border-bottom: 3px solid #b3c9b3;
+    }
+
 
     .small-text {
         font-size: 11px;
@@ -71,8 +75,6 @@
     body {
         font-size: 14px;
         font-weight: 400;
-        color: var(--black_default);
-        overflow-x: hidden !important;
         line-height: 1.7;
         font-family: 'Arial', Sans-Serif;
     }
@@ -88,7 +90,6 @@
 
     .wp-block-image > img {
         max-width: 80%;
-        max-height: 400px;
     }
 
     .wp-block-image {
@@ -129,7 +130,9 @@
             </tr>
             <tr>
                 <td class="td-content" align="left" valign="middle">
-                    <img class="banner" src="<?=$banner?>" border="0" alt="Banneri" align="center"/>
+                    <div class="cropped">
+                        <img class="banner" src="<?=$banner?>" border="0" alt="Banneri" align="center"/>
+                    </div>
                 </td>
             </tr>
             </tbody>
