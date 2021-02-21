@@ -14,8 +14,6 @@
 
     table {
         width: 100%;
-        border-left: 2px solid #e6e6e6;
-        border-right: 2px solid #e6e6e6;
     }
 
     .table-content {
@@ -47,7 +45,7 @@
     }
 
     .cropped {
-        height: 300px;
+        max-height: 300px;
         overflow: hidden;
         border-bottom: 3px solid #b3c9b3;
     }
@@ -57,7 +55,7 @@
         font-size: 11px;
         color: #575757;
         line-height: 200%;
-        font-family: 'Arial', Sans-Serif;
+        font-family: 'Montserrat',sans-serif;
         text-decoration: none;
     }
 
@@ -76,7 +74,7 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 1.7;
-        font-family: 'Arial', Sans-Serif;
+        font-family: 'Montserrat',sans-serif;
     }
 
     h1 {
@@ -154,7 +152,7 @@
                 <img class="logo"
                      src="https://www.asteriski.fi/wp-content/themes/wp-asteriski-theme/assets/img/asteriski-logo.png">
                 <span class="small-text" style="margin-left: 10px;">
-                    <a href="mailto:asteriski.utu.fi">Onko asiaa?</a><br>
+                    <a href="mailto:asteriski@utu.fi">Onko asiaa?</a><br>
                         Käy nettisivuillamme!
                     <a href="https://www.asteriski.fi/">asteriski.fi</a>
                 </span>
@@ -162,7 +160,7 @@
 
             <td class="td-content-slim" style="text-align: right;" align="center">
                 <span class="small-text">
-                    Jos et halua saada Riski-infon sähköposteja <a href="https://lists.utu.fi/mailman/listinfo/riski-info">peruuta tilaus täällä.</a>.
+                    Jos et halua saada Riski-infon sähköposteja <a href="https://lists.utu.fi/mailman/listinfo/riski-info">peruuta tilaus täällä.</a>
                 </span>
         </table>
 
