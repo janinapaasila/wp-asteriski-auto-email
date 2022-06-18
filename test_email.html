@@ -6,177 +6,64 @@
     <title>Asteriskin maili</title>
 </head>
 <body>
-<style>
-    .container-table {
-        width: 100%;
-        background-color: #ebebeb;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    .table-content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-
-    .td-content-slim {
-        background-color: #ffffff;
-        border-top: 0px solid #000000;
-        text-align: center;
-        height: 50px;
-    }
-
-    .td-content {
-        background-color: #ffffff;
-        border-top: 0px solid #333333;
-        border-bottom: 10px solid #FFFFFF;
-    }
-
-    .banner{
-        width: 100%;
-    }
-    .cropped {
-        max-height: 300px;
-        overflow: hidden;
-        border-bottom: 3px solid #b3c9b3;
-    }
-
-    .content{
-        padding: 20px;
-    }
-
-    .small-text {
-        font-size: 11px;
-        color: #575757;
-        line-height: 200%;
-        font-family: 'Montserrat',sans-serif;
-        text-decoration: none;
-    }
-
-    .bolder-text {
-        font-weight: bold;
-    }
-
-    .wp-block-separator {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        border-top: 3px solid rgb(82 187 90);
-        width: 40%;
-    }
-
-    body {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.7;
-        font-family: 'Montserrat',sans-serif;
-    }
-
-    h1 {
-        margin-bottom: 10px;
-        font-size: 22px;
-        font-weight: bold;
-        color: #494a48;
-        font-family: arial;
-        text-align: center;
-    }
-
-    .wp-block-image > img {
-        height: auto;
-        max-width: 90%;
-    }
-
-    .wp-block-image {
-        text-align: center;
-    }
-
-    .logo {
-        width: 50px;
-    }
-
-    a {
-        color: #35b233 !important;
-        font-weight: bold;
-    }
-</style>
-
-<table cellspacing="0" cellpadding="0" width="100%" bgcolor="#ebebeb">
-    <tbody>
-    <tr>
-        <td align="center" valign="top"></td>
+<table role="presentation">
+    <tbody><tr>
+        <td valign="top" align="center"></td>
+        <td valign="top" align="center"></td>
     </tr>
-    </tbody>
-</table>
 
-
-<table cellspacing="0" cellpadding="0">
-    <tbody>
     <tr>
-        <table cellspacing="0" cellpadding="0">
-            <tbody>
-            <tr>
-                <td class="td-content-slim" align="center">
-                    <span class="small-text">
-                        Tämän voi lukea myös nettisivuillamme!
-                        <!--                        <a class="small-text bolder-text" href="<?=$this->article_url?>">Avaa selaimessa.</a>-->
-                        <a class="small-text bolder-text" href="http://localhost/2021/02/18/testi-sauna/">Avaa selaimessa.</a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="td-content" align="left" valign="middle">
-                    <div class="cropped">
-                        <img class="banner" src="https://www.asteriski.fi/wp-content/themes/wp-asteriski-theme/assets/img/tausta.jpg"
-                             border="0" alt="Banneri" align="center"/>
-                    </div>
-                </td>
-
-            </tr>
-            </tbody>
-        </table>
-
-        <table class="table-content" style="margin-left: 20px !important;" cellspacing="0" cellpadding="25">
-            <h1>
-                <!--                    <?= $this->title ?>-->
-                Otsikko:
-            </h1>
-            <div class="content">
-                <p>
-                    The standard Lorem Ipsum passage, used since the 1500s
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                </p>
-                <hr class="wp-block-separator">
-                <p>
-                    1914 translation by H. Rackham
-                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
-                </p>
-                <figure class="wp-block-image size-large"><noscript><img loading="lazy" width="3508" height="2480" src="http://localhost/wp-content/uploads/2019/09/pilttisitsit19.png" alt="" class="wp-image-4429"/></noscript><img loading="lazy" width="3508" height="2480" src="http://localhost/wp-content/uploads/2019/09/pilttisitsit19.png" data-src="http://localhost/wp-content/uploads/2019/09/pilttisitsit19.png" alt="" class="wp-image-4429 lazyloaded"></figure>
+        <td colspan="2" class="td-content" valign="middle" align="left">
+            <div class="cropped">
+                <img class="banner" src="https://www.asteriski.fi/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/01/ojennakatesi-800x400.png.webp" alt="Banneri" border="0" align="middle">
             </div>
-           </table>
-
-
-        <!--        FOOTER          -->
-        <table style="border-top: 3px solid #b3c9b3;" cellpadding="5" cellspacing="0">
-            <td class="td-content-slim" style="text-align: left; display: flex" align="center">
-                <img class="logo"
-                     src="https://www.asteriski.fi/wp-content/themes/wp-asteriski-theme/assets/img/asteriski-logo.png">
-                <span class="small-text" style="margin-left: 10px;">
-                    <a href="mailto:asteriski.utu.fi">Onko asiaa?</a><br>
-                        Käy nettisivuillamme!
-                    <a href="https://www.asteriski.fi/">asteriski.fi</a>
-                </span>
-            </td>
-
-            <td class="td-content-slim" style="text-align: right;" align="center">
-                <span class="small-text">
-                    Jos et halua saada Riski-infon viestejä <a href="https://lists.utu.fi/mailman/listinfo/riski-info">peruuta tilaus täällä.</a>.
-                </span>
-        </table>
-
+        </td>
     </tr>
-    </tbody>
-</table>
+
+    <tr>
+        <td colspan="2" class="td-content" valign="middle" align="center">
+            <h1>
+                Asteriski goes verenluovutus            </h1>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="td-content" valign="middle" align="center">
+            <div class="content">
+                
+<p>Verenluovuttajia tarvitaan kaikista veriryhmistä joka arkipäivä, siispä Asteriski lähtee luovuttamaan verta keskiviikkona 29.6. klo 16:30 eteenpäin!</p><p>Ajat menevät porrastetusti: 16:30, 16:45 ja 17:00. Jokaiseen ajanvaraukseen mahtuu 3 henkeä, eli yhteensä 9 riskillä on mahdollisuus luovuttamiseen. Rajoitetun osallistujamäärän vuoksi tapahtumaan tulee ilmoittautua etukäteen.</p><p>Testaa <a href="https://www.sovinkoluovuttajaksi.fi/?_ga=2.252244106.203757971.1641889477-302445129.1641492829&amp;_ga=2.252244106.203757971.1641889477-302445129.1641492829" data-type="URL" data-id="https://www.sovinkoluovuttajaksi.fi/?_ga=2.252244106.203757971.1641889477-302445129.1641492829&amp;_ga=2.252244106.203757971.1641889477-302445129.1641492829"><span style="text-decoration: underline;">täältä,</span></a> sovitko luovuttajaksi.</p><p>Ilmoittautuminen aukeaa perjantaina 17.6. klo 13:00, ilmoamaan pääset <span style="text-decoration: underline;"><a href="https://q.surveypal.com/Verenluovutus-29.6%2E" data-type="URL" data-id="https://q.surveypal.com/Verenluovutus-29.6%2E">tästä</a></span>.</p><hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"><h4>Asteriski goes blood donation</h4><p>Blood donors are needed from all blood groups every weekday, so Asteriski will go donate blood on Wednesday June 29th at 4.30 pm onwards!</p><p>The times are staggered: 4.30 pm, 4.45 pm and 5 pm. Each appointment can accommodate 3 people, ie a total of 9 eager have the opportunity to donate. Due to the limited number of participants, the event must be registered in advance.</p><p>Test <a href="https://www.sovinkoluovuttajaksi.fi/?_ga=2.118655306.2121379059.1641904803-407742192.1641904803#" data-type="URL" data-id="https://www.sovinkoluovuttajaksi.fi/?_ga=2.118655306.2121379059.1641904803-407742192.1641904803#"><span style="text-decoration: underline;">here</span></a>, whether you are a suitable donor.</p><p>The enrollment opens June 17th 1 pm, you can enroll in <span style="text-decoration: underline;"><a href="https://q.surveypal.com/Verenluovutus-29.6%2E" data-type="URL" data-id="https://q.surveypal.com/Verenluovutus-29.6%2E">here</a></span>.</p>
+                        </div>
+        </td>
+    </tr>
+    <!--        FOOTER          -->
+
+    <tr>
+        <td colspan="1" class="" align="center">
+            <img class="logo" src="https://www.asteriski.fi/wp-content/uploads/2022/06/asteriski-logo_1_33.png" alt="logo">
+        </td>
+        <td colspan="1">
+            <span class="small-text">
+                Want to read the news from website?<a href="https://www.asteriski.fi/2022/06/16/asteriski-goes-verenluovutus/"> Click here!</a><br>
+                Questions or feedback?<a href="mailto:asteriski@utu.fi"> Email us!</a><br>
+                Want to manage your subscription?<a href="https://lists.utu.fi/mailman/listinfo/riski-info"> You can do it here.</a><br>
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <a class="img-a" href="https://www.facebook.com/asteriski/"><img src="https://www.asteriski.fi/wp-content/uploads/2022/06/facebook-brands.png" alt="Facebook" width="32px"></a>
+            <a class="img-a" href="https://www.instagram.com/asteriski_ry"><img src="https://www.asteriski.fi/wp-content/uploads/2022/06/instagram-brands.png" alt="Instagram" width="32px"></a>
+            <a class="img-a" href="https://discord.gg/NkGcYsrwzh"><img src="https://www.asteriski.fi/wp-content/uploads/2022/06/discord-brands.png" alt="Discord" width="32px"></a>
+            <a class="img-a" href="https://github.com/asteriskiry"><img src="https://www.asteriski.fi/wp-content/uploads/2022/06/github-brands.png" alt="Github" width="32px"></a>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+</tbody></table>
+
 </body>
 </html>
