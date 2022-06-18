@@ -4,168 +4,172 @@
 <head>
     <meta charset="UTF-8">
     <title>Asteriskin maili</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .container-table {
+            width: 100%;
+            background-color: #ebebeb;
+        }
+
+        table[role=presentation] {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-collapse
+        }
+
+        .td-content {
+            background-color: #ffffff;
+            border-top: 0px solid #333333;
+            border-bottom: 10px solid #FFFFFF;
+        }
+
+        .content {
+            padding: 10px 20px;
+        }
+
+
+        .banner {
+            width: 100%;
+        }
+
+        .cropped {
+            max-height: 300px;
+            overflow: hidden;
+            border-bottom: 3px solid #289041;
+        }
+
+
+        .small-text {
+            font-size: 11px;
+            color: #575757;
+            line-height: 200%;
+            font-family: 'Open Sans', sans-serif;
+            text-decoration: none;
+        }
+
+        .bolder-text {
+            font-weight: bold;
+        }
+
+        .wp-block-separator {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-top: 3px solid rgb(82 187 90);
+            width: 40%;
+        }
+
+        body {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.7;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 0;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: "Helvetica", sans-serif;
+            text-align: center;
+        }
+
+        .wp-block-image > img {
+            max-width: 80%;
+        }
+
+        .wp-block-image {
+            text-align: center;
+        }
+
+        .logo {
+            width: 50px;
+        }
+
+        a {
+            color: #35b233 !important;
+            font-weight: bold;
+        }
+
+        .img-a{
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            transition: all .5s ease-in-out;
+        }
+
+        .img-a:hover{
+            filter: brightness(0.5);
+        }
+    </style>
 </head>
 <body>
-<style>
-    .container-table {
-        width: 100%;
-        background-color: #ebebeb;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    .table-content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-
-    .td-content-slim {
-        background-color: #ffffff;
-        border-top: 0px solid #000000;
-        text-align: center;
-        height: 50px;
-    }
-
-    .td-content {
-        background-color: #ffffff;
-        border-top: 0px solid #333333;
-        border-bottom: 10px solid #FFFFFF;
-    }
-
-    .content{
-        padding: 20px;
-    }
-
-
-    .banner{
-        width: 100%;
-    }
-
-    .cropped {
-        max-height: 300px;
-        overflow: hidden;
-        border-bottom: 3px solid #b3c9b3;
-    }
-
-
-    .small-text {
-        font-size: 11px;
-        color: #575757;
-        line-height: 200%;
-        font-family: 'Montserrat',sans-serif;
-        text-decoration: none;
-    }
-
-    .bolder-text {
-        font-weight: bold;
-    }
-
-    .wp-block-separator {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        border-top: 3px solid rgb(82 187 90);
-        width: 40%;
-    }
-
-    body {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.7;
-        font-family: 'Montserrat',sans-serif;
-    }
-
-    h1 {
-        margin-bottom: 10px;
-        font-size: 22px;
-        font-weight: bold;
-        color: #494a48;
-        font-family: arial;
-        text-align: center;
-    }
-
-    .wp-block-image > img {
-        max-width: 80%;
-    }
-
-    .wp-block-image {
-        text-align: center;
-    }
-
-    .logo {
-        width: 50px;
-    }
-
-    a {
-        color: #35b233 !important;
-        font-weight: bold;
-    }
-</style>
-
-<table cellspacing="0" cellpadding="0" width="100%" bgcolor="#ebebeb">
-    <tbody>
+<table role="presentation">
     <tr>
         <td align="center" valign="top"></td>
+        <td align="center" valign="top"></td>
     </tr>
-    </tbody>
-</table>
 
-
-<table cellspacing="0" cellpadding="0">
-    <tbody>
     <tr>
-        <table cellspacing="0" cellpadding="0">
-            <tbody>
-            <tr>
-                <td class="td-content-slim" align="center">
-                    <span class="small-text">
-                        Tämän voi lukea myös nettisivuillamme!
-                        <a class="small-text bolder-text" href="<?=$article_url?>">Avaa selaimessa.</a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="td-content" align="left" valign="middle">
-                    <div class="cropped">
-                        <img class="banner" src="<?=$banner?>" border="0" alt="Banneri" align="center"/>
-                    </div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+        <td colspan="2" class="td-content" align="left" valign="middle">
+            <div class="cropped">
+                <img class="banner" src="<?= $banner ?>" border="0" alt="Banneri" align="center"/>
+            </div>
+        </td>
+    </tr>
 
-        <table class="table-content" style="margin-left: 20px !important;" cellspacing="0" cellpadding="25">
+    <tr>
+        <td colspan="2" class="td-content" align="center" valign="middle">
             <h1>
                 <?= $title ?>
             </h1>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="td-content" align="center" valign="middle">
             <div class="content">
                 <?= $content ?>
             </div>
-        </table>
-
-
-        <!--        FOOTER          -->
-        <table style="border-top: 3px solid #b3c9b3;" cellpadding="5" cellspacing="0">
-            <td class="td-content-slim" style="text-align: left; display: flex" align="center">
-                <img class="logo"
-                     src="https://www.asteriski.fi/wp-content/themes/wp-asteriski-theme/assets/img/asteriski-logo.png">
-                <span class="small-text" style="margin-left: 10px;">
-                    <a href="mailto:asteriski@utu.fi">Onko asiaa?</a><br>
-                        Käy nettisivuillamme!
-                    <a href="https://www.asteriski.fi/">asteriski.fi</a>
-                </span>
-            </td>
-
-            <td class="td-content-slim" style="text-align: right;" align="center">
-                <span class="small-text">
-                    Jos et halua saada Riski-infon sähköposteja <a href="https://lists.utu.fi/mailman/listinfo/riski-info">peruuta tilaus täällä.</a>
-                </span>
-        </table>
-
+        </td>
     </tr>
-    </tbody>
+    <!--        FOOTER          -->
+
+    <tr>
+        <td colspan="1" class="" align="center">
+            <img class="logo"
+                 src="https://www.asteriski.fi/wp-content/uploads/2022/06/asteriski-logo_1_33.png" alt="logo">
+        </td>
+        <td colspan="1">
+            <span class="small-text">
+                Want to read the news from website?<a href="<?= $article_url ?>"> Click here!</a><br>
+                Questions or feedback?<a href="mailto:asteriski@utu.fi"> Email us!</a><br>
+                Want to manage your subscription?<a href="https://lists.utu.fi/mailman/listinfo/riski-info"> You can do it here.</a><br>
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <a class="img-a" href="https://www.facebook.com/asteriski/"><img width="32px" src="https://www.asteriski.fi/wp-content/uploads/2022/06/facebook-brands.png"
+                                                               alt="Facebook"></a>
+            <a class="img-a" href="https://www.instagram.com/asteriski_ry"><img width="32px"
+                    src="https://www.asteriski.fi/wp-content/uploads/2022/06/instagram-brands.png" alt="Instagram"></a>
+            <a class="img-a" href="https://discord.gg/NkGcYsrwzh"><img width="32px" src="https://www.asteriski.fi/wp-content/uploads/2022/06/discord-brands.png"
+                                                         alt="Discord"></a>
+            <a class="img-a" href="https://github.com/asteriskiry"><img width="32px" src="https://www.asteriski.fi/wp-content/uploads/2022/06/github-brands.png"
+                                                          alt="Github"></a>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
 </table>
 </body>
 </html>
