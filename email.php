@@ -156,13 +156,13 @@
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <a class="img-a" href="https://www.facebook.com/asteriski/"><img width="32px" src="https://www.asteriski.fi/wp-content/uploads/2022/06/facebook-brands.png"
+            <a class="img-a" href="https://www.facebook.com/asteriski/"><img width="32px" src="https://www.asteriski.fi/wp-content/uploads/2022/07/facebook-brands.png"
                                                                alt="Facebook"></a>
             <a class="img-a" href="https://www.instagram.com/asteriski_ry"><img width="32px"
-                    src="https://www.asteriski.fi/wp-content/uploads/2022/06/instagram-brands.png" alt="Instagram"></a>
-            <a class="img-a" href="https://discord.gg/NkGcYsrwzh"><img width="32px" src="https://www.asteriski.fi/wp-content/uploads/2022/06/discord-brands.png"
+                    src="https://www.asteriski.fi/wp-content/uploads/2022/07/instagram-brands.png" alt="Instagram"></a>
+            <a class="img-a" href="https://discord.gg/NkGcYsrwzh"><img width="32px" src="https://www.asteriski.fi/wp-content/uploads/2022/07/discord-brands.png"
                                                          alt="Discord"></a>
-            <a class="img-a" href="https://github.com/asteriskiry"><img width="32px" src="https://www.asteriski.fi/wp-content/uploads/2022/06/github-brands.png"
+            <a class="img-a" href="https://github.com/asteriskiry"><img width="32px" src="https://www.asteriski.fi/wp-content/uploads/2022/07/github-brands.png"
                                                           alt="Github"></a>
         </td>
     </tr>
