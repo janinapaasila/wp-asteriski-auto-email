@@ -13,7 +13,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 /** ADMIN */
 add_action('admin_menu', function () {
-	add_menu_page('Sähköpostiasetukset', 'Sähköposti', 'manage_options', 'asteriski-auto-email', 'asteriski_plugin_page');
+	add_menu_page('Sähköpostiasetukset', 'Sähköposti', 'manage_options', 'asteriski-auto-email', 'asteriski_plugin_page', 'dashicons-email',10);
 });
 
 add_action('admin_init', function () {
