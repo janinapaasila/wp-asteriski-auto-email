@@ -175,7 +175,7 @@ function get_article_categories($post_id, $only_one = true){
  */
 function get_post_html($post, $post_id)
 {
-	$banner = get_the_post_thumbnail_url($post_id) ?: "https://www.asteriski.fi/wp-content/themes/wp-asteriski-theme/assets/img/tausta.jpg";
+	$banner = get_the_post_thumbnail_url($post_id) ?: "https://www.asteriski.fi/wp-content/uploads/2023/11/asteriski_default_image.jpg";
 	$title = $post->post_title;
 	$content = $post->post_content;
 	$category = get_article_categories($post_id, false);
